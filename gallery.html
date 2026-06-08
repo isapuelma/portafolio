@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHIVO | Isabel Puelma - Portafolio Completo</title>
+    
+    <meta name="description" content="Explora el archivo completo de proyectos de Isabel Puelma.">
+    <link rel="icon" href="isa.svg" type="image/svg+xml">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Saltar al contenido</a>
+    
+    <!-- Capas Premium -->
+    <div class="page-overlay"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Header Fino -->
+    <header class="header">
+        <a href="index.html" class="brand-name">
+            <img src="isabelpuelma.svg" alt="Logo Isabel Puelma">
+        </a>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="gallery.html" class="nav-link active">Archivo</a>
+            <a href="about.html" class="nav-link">Info</a>
+            <a href="contact.html" class="nav-link">Contacto</a>
+        </nav>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+    
+    <!-- Navegación Móvil -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="gallery.html" class="mobile-link">Archivo</a>
+        <a href="about.html" class="mobile-link">Info</a>
+        <a href="contact.html" class="mobile-link">Contacto</a>
+    </div>
+
+    <main id="main-content">
+        <!-- SECCIÓN TÍTULO: Reducida y más "Editorial" -->
+        <section class="bento-grid" style="border-top:none;">
+            <div class="cell col-span-12 reveal-element" style="padding-top: 10rem; padding-bottom: 2rem;">
+                <h1 class="display-text" style="letter-spacing: -0.05em;">Archivo.</h1>
+            </div>
+            
+            <div class="cell col-span-12 reveal-element" style="padding: 1.5rem var(--spacing-margin); border-bottom: 1px solid var(--grid-line-color);">
+                <div class="filter-container" style="gap: 15px;">
+                    <button class="filter-btn active text-mono" data-filter="all">All</button>
+                    <button class="filter-btn text-mono" data-filter="branding">Branding</button>
+                    <button class="filter-btn text-mono" data-filter="web">Web</button>
+                    <button class="filter-btn text-mono" data-filter="packaging">Packaging</button>
+                    <button class="filter-btn text-mono" data-filter="ilustracion">Illustration</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRILLA DINÁMICA: Aseguramos min-height para evitar saltos visuales -->
+        <section class="gallery-grid-section-variable" id="portfolio-grid" style="min-height: 80vh; background: var(--color-bg);">
+            <!-- Los proyectos se inyectan aquí vía JavaScript -->
+        </section>
+
+    <!-- Footer Consistente -->
+    <footer class="footer-container" style="padding-top: 8vh;">
+        <div class="footer-main">
+            <p style="font-family: var(--font-mono); text-transform: uppercase; opacity: 0.5; margin-bottom: 1rem;">Trabajemos juntos</p>
+            <a href="mailto:mipuelma@uc.cl" class="footer-email">mipuelma@uc.cl</a>
+        </div>
+        <div class="footer-bottom-row">
+            <div class="footer-social-links">
+                <a href="https://instagram.com/isa_puelma" target="_blank">Instagram ↗</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn ↗</a>
+                <a href="faq.html" target="_blank">FAQ ↗</a>
+            </div>
+            <div style="text-align: right;">
+                <p>© 2026 Isabel Puelma Studio.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Librerías -->
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- JS de la App -->
+    <script src="data.js"></script>
+    <script src="portafolio.js"></script>
+</body>
+</html>

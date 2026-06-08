@@ -1,0 +1,3252 @@
+:root {
+    /* --- 1. PALETA DEFINITIVA --- */
+    --color-bg: #0D0D0D;       
+    --color-text: #EAEAEA;     
+    --color-lime: #EFFF93;     
+    --color-accent: #4B5EFC;   
+    --color-surface: #122023;  
+    --grid-line-color: rgba(255, 255, 255, 0.05); 
+    
+    --header-height: 90px;
+    --font-main: 'Space Grotesk', sans-serif;
+    --font-mono: 'Space Grotesk', monospace; 
+/* --- style.css (Jerarquía Tipográfica Unificada) --- */
+/* =========================================================================
+   DIRECCIÓN DE ARTE RECALIBRADA: PÁGINA DE CONTACTO (INYECCIÓN LÍNEA 1)
+   ========================================================================= */
+
+.contact-premium-grid {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    min-height: calc(100vh - var(--header-height)) !important;
+    background-color: var(--color-bg) !important;
+}
+
+/* Columna Izquierda: Bloque de Texto Editorial */
+.contact-info-panel {
+    grid-column: span 5 !important;
+    padding: 14vh var(--spacing-margin) 8vh var(--spacing-margin) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    border-right: 1px solid var(--grid-line-color) !important;
+    box-sizing: border-box !important;
+}
+
+.contact-badge {
+    font-size: 0.75rem !important;
+    letter-spacing: 0.15em !important;
+    opacity: 0.4 !important;
+    text-transform: uppercase !important;
+    display: block !important;
+    margin-bottom: 2rem !important;
+}
+
+
+/* CORRECCIÓN: Volvemos al impacto gigante y mayúsculas en perfecta unidad con tu web */
+/* UNIFICACIÓN ABSOLUTA: El título de contacto hereda el ADN de tu página de Archivo */
+.contact-display-title {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: clamp(2.5rem, 6vw, 6rem) !important; /* Mismo tamaño masivo de tus cabeceras */
+    font-weight: 500 !important; /* SemiBold: Trazo grueso con mucha fuerza visual */
+    line-height: 1.0 !important;
+    letter-spacing: -0.05em !important; /* El tracking ultra-apretado exacto de tu Archivo */
+    color: #ffffff !important;
+    margin-bottom: 2rem !important;
+    text-transform: none !important; /* Permite mayúscula inicial y minúsculas sutiles */
+}
+
+
+.contact-submit-btn:hover {
+    transform: translateY(-2px) !important;
+    background-color: #ffffff !important; /* El fondo cambia a blanco */
+    color: var(--color-bg) !important;    /* ¡Arreglado! El texto pasa al color oscuro del fondo de tu web, logrando un contraste 100% legible */
+}
+
+.contact-lead-text {
+    font-size: 0.98rem !important;
+    line-height: 1.6 !important;
+    opacity: 0.6 !important;
+    max-width: 32ch !important;
+}
+
+.contact-links-block {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.8rem !important;
+    margin-top: 4rem !important;
+}
+
+.contact-sub-badge {
+    font-size: 0.65rem !important;
+    letter-spacing: 0.1em !important;
+    opacity: 0.25 !important;
+    text-transform: uppercase !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+}
+
+.contact-text-link {
+    font-family: var(--font-mono, monospace) !important;
+    font-size: 0.9rem !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    width: fit-content !important;
+    opacity: 0.8 !important;
+    transition: color 0.3s ease, opacity 0.3s ease !important;
+}
+
+.contact-text-link:hover {
+    color: var(--color-lime) !important;
+    opacity: 1 !important;
+}
+
+/* Columna Derecha: El Formulario Desmaterializado */
+.contact-form-panel {
+    grid-column: span 7 !important;
+    padding: 14vh var(--spacing-margin) 8vh var(--spacing-margin) !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+.premium-input-form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4rem !important; /* Espaciado generoso entre campos */
+    width: 100% !important;
+    max-width: 600px !important;
+}
+
+/* Campos de entrada interactivos con etiqueta flotante */
+.input-group {
+    position: relative !important;
+    width: 100% !important;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100% !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+    padding: 12px 0 !important;
+    color: #ffffff !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 1.2rem !important;
+    outline: none !important;
+    resize: none !important;
+    box-sizing: border-box !important;
+}
+
+.input-group label {
+    position: absolute !important;
+    left: 0 !important;
+    top: 14px !important;
+    color: rgba(255, 255, 255, 0.3) !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.05em !important;
+    pointer-events: none !important;
+    text-transform: uppercase !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Efecto Flotante al enfocar o tener texto */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+    top: -18px !important;
+    font-size: 0.65rem !important;
+    color: var(--color-lime) !important;
+    letter-spacing: 0.1em !important;
+}
+
+/* Línea de interacción en los inputs */
+.input-border-line {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 1px !important;
+    background-color: var(--color-lime) !important;
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.input-group input:focus ~ .input-border-line,
+.input-group textarea:focus ~ .input-border-line {
+    width: 100% !important;
+}
+
+/* Contenedor del Botón de Acción */
+.submit-action-container {
+    margin-top: 1rem !important;
+    width: 100% !important;
+}
+
+/* Botón Estilo Pastilla que conversa con el Toolkit */
+.contact-submit-btn {
+    background: var(--color-lime) !important;
+    color: var(--color-bg) !important;
+    border: none !important;
+    padding: 14px 28px !important;
+    border-radius: 100px !important; /* Formato pastilla exacto */
+    font-family: var(--font-mono, monospace) !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    transition: transform 0.3s ease, background-color 0.3s ease !important;
+}
+
+.contact-submit-btn:hover {
+    transform: translateY(-2px) !important;
+    background-color: #ffffff !important; /* Cambia a blanco sutil en hover */
+}
+
+/* Cuadro de éxito */
+.premium-form-success {
+    display: none !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    padding: 3rem var(--spacing-margin) !important;
+    border: 1px dashed rgba(255, 255, 255, 0.15) !important;
+    color: var(--color-lime) !important;
+    text-align: center !important;
+    max-width: 600px !important;
+    box-sizing: border-box !important;
+}
+
+.premium-form-success i {
+    font-size: 2rem !important;
+}
+
+.premium-form-success p {
+    font-size: 0.8rem !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+}
+
+/* =========================================================================
+   RESPONSIVE ADAPTATIVO CONTACTO
+   ========================================================================= */
+@media (max-width: 992px) {
+    .contact-premium-grid {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .contact-info-panel {
+        width: 100% !important;
+        border-right: none !important;
+        border-bottom: 1px solid var(--grid-line-color) !important;
+        padding-top: 14vh !important;
+        padding-bottom: 6vh !important;
+        gap: 3rem !important;
+    }
+    .contact-form-panel {
+        width: 100% !important;
+        padding-top: 8vh !important;
+        padding-bottom: 10vh !important;
+    }
+    .contact-links-block {
+        margin-top: 0 !important;
+    }
+}
+
+/* =========================================================================
+   REDISEÑO DE PÁGINA ABOUT / INFO (INYECCIÓN LIMPIA DE VANGUARDIA)
+   ========================================================================= */
+
+/* Forzamos a que el Manifiesto sea lo único en pantalla al cargar (75vh a 85vh de aire) */
+.about-hero-fullscreen {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-height: 85vh !important; /* Ocupa casi toda la pantalla inicial */
+    padding: 0 var(--spacing-margin) !important;
+    box-sizing: border-box !important;
+}
+
+/* Calibración fina de Space Grotesk: más pequeña, ligera y elegante */
+.about-manifesto-text {
+    font-size: clamp(1.6rem, 3vw, 2.4rem) !important; /* Tamaño reducido para un look premium de estudio */
+    line-height: 1.35 !important; /* Más aire entre líneas */
+    font-weight: 400 !important; /* Trazo regular para evitar que se vea grotesco o gigante */
+    max-width: 38ch !important; /* Control estricto de lectura por línea */
+    letter-spacing: -0.01em !important;
+    color: #ffffff !important;
+}
+
+/* Color de acento sutil dentro del manifiesto */
+.highlight-lime {
+    color: var(--color-lime) !important;
+    font-weight: 400 !important;
+}
+
+/* Estructura Perfil Asimétrico (Aparece abajo al hacer scroll) */
+.about-profile-grid {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    border-top: 1px solid var(--grid-line-color) !important;
+    border-bottom: 1px solid var(--grid-line-color) !important;
+    margin-top: 5vh !important; /* Separación intencional del hero */
+}
+
+/* ... El resto de tus estilos (.about-portrait-frame, casillas, etc.) continúan igual abajo ... */
+/* Estructura Perfil Asimétrico con Aire Calibrado */
+.about-profile-grid {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    border-top: 1px solid var(--grid-line-color) !important;
+    border-bottom: 1px solid var(--grid-line-color) !important;
+    margin-top: 5vh !important;
+}
+
+.about-portrait-frame {
+    grid-column: span 5 !important;
+    height: 68vh !important; /* Altura estilizada */
+    overflow: hidden !important;
+    border-right: 1px solid var(--grid-line-color) !important;
+}
+
+.about-portrait-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    filter: grayscale(100%) !important;
+    transition: filter 0.8s ease, transform 0.8s ease !important;
+}
+
+.about-portrait-frame:hover .about-portrait-img {
+    filter: grayscale(0%) !important;
+    transform: scale(1.02) !important;
+}
+
+/* Espaciado interno optimizado para dar aire respecto a la foto */
+/* Espaciado interno y distribución equilibrada del bloque de texto */
+.about-profile-text {
+    grid-column: span 7 !important;
+    padding: 10vh var(--spacing-margin) !important; /* Volvemos al margen estándar de tu web */
+    padding-left: 5.5rem !important; /* Mantiene un respiro elegante con tu foto */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+}
+
+/* Título con mayor anchura para evitar que se corte en bloques angostos */
+.about-intro-title {
+    font-size: clamp(1.4rem, 2.3vw, 1.9rem) !important;
+    font-weight: 400 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.01em !important;
+    margin-bottom: 2rem !important;
+    color: #ffffff !important;
+    max-width: 42ch !important; /* Expandido: ahora el título se extiende más horizontalmente */
+}
+
+/* Párrafo con anchura óptima para diseño de vanguardia */
+.about-clean-bio {
+    font-size: 0.98rem !important;
+    line-height: 1.65 !important;
+    opacity: 0.75 !important;
+    max-width: 58ch !important; /* Expandido: el texto aprovecha el ancho sin llegar a pegarse al borde */
+}
+/* El Contenedor de las Casillas */
+.capabilities-accordion-container {
+    width: 100% !important;
+    border-top: 1px solid var(--grid-line-color) !important;
+    border-bottom: 1px solid var(--grid-line-color) !important;
+    background-color: var(--color-bg) !important;
+}
+
+/* Cada Item Desplegable */
+.info-accordion-item {
+    width: 100% !important;
+    border-bottom: 1px solid var(--grid-line-color) !important;
+    background-color: transparent !important;
+    transition: background-color 0.4s ease !important;
+}
+
+.info-accordion-item:last-child {
+    border-bottom: none !important;
+}
+
+/* El Header / Botón de la Casilla */
+.info-accordion-header {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 2.8rem var(--spacing-margin) !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer !important;
+    text-align: left !important;
+    color: #ffffff !important;
+}
+
+.info-accordion-item:hover {
+    background-color: rgba(255, 255, 255, 0.005) !important;
+}
+
+.header-left {
+    display: flex !important;
+    align-items: center !important;
+    gap: 3rem !important;
+}
+
+.accent-number {
+    color: var(--color-lime) !important;
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+}
+
+/* Corrección de Tipografía para los títulos del acordeón */
+.accordion-title {
+    font-family: 'Space Grotesk', sans-serif !important; /* Forzada explícitamente */
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem) !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.01em !important;
+}
+
+/* Rediseño Completo de Etiquetas estilo Pastilla Avanzada */
+.accordion-toolkit {
+    display: flex !important;
+    gap: 8px !important;
+    flex-wrap: wrap !important;
+    margin-top: 0.5rem !important;
+}
+
+.tool-tag {
+    font-family: var(--font-mono, monospace) !important;
+    font-size: 0.72rem !important;
+    padding: 6px 14px !important; /* Más holgura horizontal para formato pastilla */
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.07) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    border-radius: 100px !important; /* Bordes totalmente redondeados (Pastilla) */
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important; /* Separación perfecta entre el icono y el texto */
+    transition: all 0.3s ease !important;
+}
+
+/* Efecto Hover sutil para las pastillas */
+.tool-tag:hover {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+}
+
+/* Tamaño de los iconos minimalistas dentro de la pastilla */
+.tool-tag i {
+    font-size: 0.85rem !important;
+    opacity: 0.8 !important;
+}
+
+/* Contenido de la Casilla (Efecto Colapso Fluido) */
+.info-accordion-content {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: max-height 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-sizing: border-box !important;
+}
+
+/* Cuando se abre la casilla */
+.info-accordion-item.is-open .info-accordion-content {
+    max-height: 700px !important; 
+}
+
+.info-accordion-item.is-open .accordion-toggle-icon {
+    transform: rotate(45deg) !important; 
+    opacity: 1 !important;
+    color: var(--color-lime) !important;
+}
+
+/* Grilla Interior de las Casillas */
+.accordion-inner-grid {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    gap: 3rem !important;
+    padding: 0 var(--spacing-margin) 4rem calc(var(--spacing-margin) + 4rem) !important;
+}
+
+.content-col-left {
+    grid-column: span 6 !important;
+}
+
+.content-col-right {
+    grid-column: span 6 !important;
+}
+
+.section-subtitle {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.12em !important;
+    opacity: 0.3 !important;
+    text-transform: uppercase !important;
+    margin-bottom: 1.5rem !important;
+    display: block !important;
+}
+
+.accordion-inner-grid .text-body {
+    font-size: 0.98rem !important;
+    line-height: 1.6 !important;
+    opacity: 0.75 !important;
+}
+
+.spec-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin-bottom: 2rem !important;
+}
+
+.spec-list li {
+    padding: 0.4rem 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+    font-size: 0.95rem !important;
+}
+
+/* Toolkit de Etiquetas de Agencias */
+.accordion-toolkit {
+    display: flex !important;
+    gap: 6px !important;
+    flex-wrap: wrap !important;
+}
+
+/* Rediseño Definitivo: Pastillas de Herramientas Estilizadas */
+.tool-tag {
+    font-family: var(--font-mono, monospace) !important;
+    font-size: 0.72rem !important;
+    padding: 7px 16px !important; /* Aumentado el aire horizontal para asentar el look de pastilla */
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.07) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    
+    /* Cambios clave solicitados */
+    border-radius: 50px !important; /* Forzado absoluto a bordes estilo pastilla perfectos */
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 9px !important; /* Separación optimizada: el icono y el texto ya no están pegados */
+    
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Efecto hover interactivo y limpio para las pastillas */
+.tool-tag:hover {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+}
+
+/* Proporción sutil de los iconos de Phosphor dentro de la pastilla */
+.tool-tag i {
+    font-size: 0.88rem !important;
+    opacity: 0.85 !important;
+}
+/* Tabla de Trayectoria */
+.about-table-container {
+    border-top: 1px solid var(--grid-line-color) !important;
+    border-bottom: 1px solid var(--grid-line-color) !important;
+    width: 100% !important;
+}
+
+.about-table-row {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    gap: 2rem !important;
+    padding: 3rem var(--spacing-margin) !important;
+    border-bottom: 1px solid var(--grid-line-color) !important;
+    transition: background-color 0.4s ease !important;
+}
+
+.about-table-row:last-child {
+    border-bottom: none !important;
+}
+
+.about-table-row:hover {
+    background-color: rgba(255, 255, 255, 0.01) !important;
+}
+
+.about-table-row.highlighted-row {
+    background-color: rgba(255, 255, 255, 0.005) !important;
+}
+
+.about-row-year {
+    grid-column: span 3 !important;
+    font-size: 0.85rem !important;
+    opacity: 0.4 !important;
+}
+
+.about-row-content {
+    grid-column: span 9 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+}
+
+.about-row-content h4 {
+    font-size: 1.2rem !important;
+    font-weight: 400;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .accordion-inner-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+        padding: 0 var(--spacing-margin) 3rem var(--spacing-margin) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-profile-grid { display: flex !important; flex-direction: column-reverse !important; }
+    .about-portrait-frame { width: 100% !important; height: 50vh !important; border-right: none !important; border-bottom: 1px solid var(--grid-line-color) !important; }
+    .about-profile-text { width: 100% !important; padding: 6vh var(--spacing-margin) !important; }
+    .about-table-row { display: flex !important; flex-direction: column !important; padding: 2rem var(--spacing-margin) !important; }
+}
+
+/* ========================================================================= */
+.display-text {
+    font-size: clamp(4rem, 12vw, 11rem)
+    font-weight: 500;
+    line-height: 0.85; /* Más apretado, más editorial */
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    color: var(--color-text);
+}
+
+.text-h1 {
+    font-size: clamp(2.5rem, 8vw, 5.5rem) 
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.text-h2 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem) */
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.text-body {
+    font-size: var(--fs-body); /* clamp(1rem, 1.2vw, 1.15rem) */
+    line-height: 1.5;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.text-mono {
+    font-family: var(--font-mono);
+    font-size: clamp(0.75rem)
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+    /* SPACING SYSTEM - Consistente en móvil */
+    --spacing-margin: 4vw; /* Desktop */
+    --spacing-mobile-x: 1.5rem; /* Horizontal padding móvil - CONSISTENTE */
+    --spacing-mobile-y-small: 2rem; /* Vertical padding pequeño móvil */
+    --spacing-mobile-y-medium: 3rem; /* Vertical padding medio móvil */
+    --spacing-mobile-y-large: 4rem; /* Vertical padding grande móvil */
+    
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- RESET --- */
+* { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
+@media (max-width: 900px) { * { cursor: auto; } }
+
+::-webkit-scrollbar { width: 6px; background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: #1a2e32; border-radius: 3px; }
+
+html, body { overflow-x: hidden; width: 100%; background-color: var(--color-bg); }
+
+body { 
+    font-family: var(--font-main); 
+    color: var(--color-text); 
+    line-height: 1.2; 
+    -webkit-font-smoothing: antialiased; 
+}
+
+/* LENIS */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+img, video { width: 100%; height: 100%; object-fit: cover; display: block; }
+a { text-decoration: none; color: inherit; cursor: pointer; }
+
+/* --- PAGE TRANSITION PREMIUM --- */
+.page-overlay {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100vh;
+    background-color: var(--color-bg); 
+    z-index: 9999; 
+    pointer-events: none;
+    opacity: 1; 
+    visibility: visible;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+                visibility 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.loaded .page-overlay { 
+    opacity: 0; 
+    visibility: hidden; 
+}
+
+/* Asegurar que se oculte incluso si JS falla (fallback) */
+@media (prefers-reduced-motion: no-preference) {
+    .page-overlay {
+        animation: pageLoadFade 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+    }
+}
+
+@keyframes pageLoadFade {
+    0% { opacity: 1; visibility: visible; }
+    99% { opacity: 0; visibility: visible; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+/* --- ANIMACIONES PREMIUM (REVEAL) --- */
+.reveal-element {
+    opacity: 0; 
+    transform: translateY(40px) scale(0.98);
+    transition: opacity 1.2s ease-out, transform 1.2s var(--ease-out-expo);
+}
+.reveal-element.active { 
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
+}
+.reveal-delay-1 { transition-delay: 0.1s; } 
+.reveal-delay-2 { transition-delay: 0.2s; }
+
+/* --- CURSOR CUSTOM --- */
+.cursor-dot { 
+    width: 8px; 
+    height: 8px; 
+    background-color: var(--color-lime); 
+    border-radius: 50%; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    transform: translate(-50%, -50%); 
+    pointer-events: none; 
+    z-index: 9999; 
+    mix-blend-mode: difference;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.cursor-outline { 
+    width: 25px; 
+    height: 25px; 
+    border: 1px solid var(--color-lime); 
+    border-radius: 50%; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    transform: translate(-50%, -50%); 
+    pointer-events: none; 
+    z-index: 9998; 
+    transition: width 0.2s, height 0.2s, opacity 0.3s; 
+    mix-blend-mode: difference;
+    opacity: 1;
+}
+
+body.hovering .cursor-outline { 
+    width: 60px; 
+    height: 60px; 
+    background-color: rgba(239, 255, 147, 0.1); 
+    border-color: transparent; 
+}
+
+/* Ocultar cursor en móvil y touch devices */
+@media (max-width: 900px) {
+    .cursor-dot,
+    .cursor-outline {
+        display: none !important;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .cursor-dot,
+    .cursor-outline {
+        display: none !important;
+    }
+}
+
+/* --- TYPOGRAPHY --- */
+.display-text {
+    /* RESPONSIVE: Escala fluida de 2rem a 8rem */
+    font-size: clamp(2rem, 8vw + 1rem, 8rem); 
+    font-weight: 500;
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+    margin-bottom: 0;
+}
+
+.display-text span.highlight {
+    font-family: var(--font-main); 
+    font-weight: 300; 
+    font-style: italic; 
+    color: var(--color-lime);
+}
+
+/* Subtítulos responsive */
+.text-subhead { 
+    font-size: clamp(1.2rem, 3vw, 1.8rem); 
+    line-height: 1.2; 
+    font-weight: 400; 
+    text-transform: uppercase;
+    word-wrap: break-word;
+}
+
+/* Textos de cuerpo responsive */
+.text-body { 
+    font-size: clamp(0.95rem, 2vw, 1.1rem); 
+    line-height: 1.6; 
+    font-weight: 300; 
+    opacity: 0.85; 
+    max-width: 65ch;
+}
+
+/* Mejora para títulos de proyectos */
+.project-title-large {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    line-height: 0.9;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.project-subtitle-large {
+    font-size: 1rem;
+    line-height: 1.4;
+    opacity: 0.7;
+    margin-top: 1rem;
+}
+
+/* --- HERO SECTION --- */
+.hero-container {
+    position: relative; 
+    width: 100%; 
+    min-height: 100vh; 
+    overflow: hidden;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    padding-bottom: 0; 
+    border-bottom: 1px solid var(--grid-line-color);
+}
+
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem var(--spacing-margin);
+}
+
+.hero-bg-media {
+    position: absolute; 
+    top: -5%; 
+    left: -5%; 
+    width: 110%; 
+    height: 110%; 
+    z-index: 0;
+    background-color: #122023; 
+    opacity: 0.5; 
+    transition: opacity 1s ease;
+    will-change: transform;
+}
+
+.hero-content-grid {
+    position: relative; 
+    z-index: 2; 
+    padding: 0 var(--spacing-margin);
+    width: 100%; 
+    text-align: center;
+}
+
+.hero-top-info {
+    position: absolute; 
+    top: 120px; 
+    left: var(--spacing-margin); 
+    right: var(--spacing-margin);
+    display: flex; 
+    justify-content: space-between; 
+    font-family: var(--font-mono); 
+    text-transform: uppercase; 
+    font-size: 0.8rem; 
+    opacity: 0.6; 
+    z-index: 2;
+}
+
+/* --- GRID & CARDS --- */
+.bento-grid, .gallery-grid-section-variable {
+    display: grid; 
+    grid-template-columns: repeat(12, 1fr); 
+    gap: 0; 
+    width: 100%;
+    border-top: 1px solid var(--grid-line-color);
+}
+
+.gallery-grid-section-variable {
+    min-height: auto;
+}
+
+.cell {
+    background-color: var(--color-bg); 
+    padding: 4rem 3rem; 
+    position: relative; 
+    overflow: hidden;
+    display: flex; 
+    flex-direction: column;
+    border-right: 1px solid var(--grid-line-color); 
+    border-bottom: 1px solid var(--grid-line-color);
+}
+
+.cell-borderless { 
+    border: none !important; 
+}
+
+/* Columnas */
+.col-span-12 { grid-column: span 12; } 
+.col-span-8 { grid-column: span 8; }
+.col-span-7 { grid-column: span 7; }
+.col-span-6 { grid-column: span 6; } 
+.col-span-5 { grid-column: span 5; }
+.col-span-4 { grid-column: span 4; }
+.col-span-3 { grid-column: span 3; }
+
+/* --- HEADER DINÁMICO & CONTRASTE --- */
+.header {
+    position: fixed; top: 0; left: 0; width: 100%; height: var(--header-height);
+    z-index: 1000; display: flex; justify-content: space-between; align-items: center; 
+    padding: 0 3rem; transition: background-color 0.4s, color 0.4s; 
+    color: var(--color-text);
+}
+
+.header.is-scrolled { 
+    background-color: rgba(18, 32, 35, 0.95); 
+    backdrop-filter: blur(15px); 
+    border-bottom: 1px solid var(--grid-line-color); 
+}
+
+/* Estado activo del Glassmorphism (cuando detecta fondo claro o scroll) */
+.header.is-glass {
+    backdrop-filter: blur(12px);
+    background-color: rgba(18, 32, 35, 0.5); /* "Nube" oscura sutil */
+    border-bottom: 1px solid var(--grid-line-color);
+}
+
+.header.is-scrolled { 
+    background-color: rgba(18, 32, 35, 0.9); 
+    backdrop-filter: blur(15px); 
+    border-bottom: 1px solid var(--grid-line-color); 
+}
+
+/* Eliminamos la clase dark-logo que causaba el conflicto en split screen */
+.brand-name img { height: 26px; width: auto; filter: brightness(0) invert(1); transition: filter 0.4s; }
+.nav-menu { display: flex; gap: 3rem; }
+
+/* Navegación sin rastro de azul */
+.nav-link { 
+    font-weight: 500; text-transform: uppercase; font-size: 0.9rem; opacity: 0.6; transition: 0.3s; color: var(--color-text); 
+}
+.nav-link:hover, .nav-link.active { 
+    opacity: 1; 
+    color: var(--color-lime) !important; 
+}
+
+        /* Estilos para el Hero Cinematográfico con Video */
+        .hero-cinema {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000; /* Fondo negro mientras carga el video */
+        }
+
+        /* El contenedor del video */
+        .hero-video-wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-video-wrap video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5; /* Ajusta la opacidad para que el texto sea legible */
+            filter: grayscale(20%) contrast(1.1); /* Toque de color sutil y dramático */
+        }
+
+        /* Capa oscura extra por seguridad de legibilidad */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(18,32,35,0.4), rgba(18,32,35,0.7));
+            z-index: 2;
+        }
+
+
+        .hero-statement .sub-headline {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.4em;
+            margin-top: 2rem;
+            color: var(--color-lime);
+            display: block;
+        }
+
+        .hero-bottom-info {
+            position: absolute;
+            bottom: 3rem;
+            left: var(--spacing-margin);
+            right: var(--spacing-margin);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            z-index: 4;
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            opacity: 0.6;
+            letter-spacing: 0.1em;
+        }
+
+        .home-work-section {
+            padding-top: 5vh;
+            background-color: var(--color-bg);
+        }
+
+        .section-header-title {
+            padding: 4rem var(--spacing-margin);
+            border-bottom: 1px solid var(--grid-line-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+/* --- EDITORIAL BLOCKS --- */
+.editorial-block {
+    grid-column: span 6;
+    padding: 4rem 3rem;
+    border-right: 1px solid var(--grid-line-color);
+    border-bottom: 1px solid var(--grid-line-color);
+}
+
+.editorial-subtitle {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.editorial-text {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.editorial-quote {
+    font-size: 2rem;
+    line-height: 1.3;
+    font-weight: 400;
+    font-style: italic;
+    padding: 3rem 0;
+}
+
+/* --- PROYECTOS CON EFECTO PREMIUM RESTAURADO --- */
+.project-item, .gallery-item {
+    text-decoration: none; 
+    position: relative; 
+    min-height: 550px; 
+    display: flex; 
+    flex-direction: column; 
+    overflow: hidden !important; 
+    padding: 0 !important; 
+    background-color: var(--color-surface); 
+    cursor: pointer;
+    border-right: 1px solid var(--grid-line-color); 
+    border-bottom: 1px solid var(--grid-line-color);
+}
+
+.project-item img, .gallery-item img {
+    position: absolute; 
+    top: -10%; 
+    left: 0; 
+    width: 100%; 
+    height: 120%; 
+    object-fit: cover; 
+    opacity: 0.85; 
+    filter: grayscale(100%); 
+    z-index: 1;
+    /* EFECTO PREMIUM: Transición cinematográfica de 1.6s con zoom */
+    transition: transform 1.6s var(--ease-out-expo), filter 0.5s ease, opacity 0.5s ease;
+    will-change: transform; 
+}
+
+/* HOVER PREMIUM: Zoom + Color */
+.project-item:hover img, 
+.gallery-item:hover img { 
+    filter: grayscale(0%); 
+    opacity: 1; 
+    transform: scale(1.05); /* Zoom sutil - "efecto ventana" */
+}
+
+/* Project Info - Siempre visible (como solicitaste) */
+.project-info, .gallery-overlay {
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    padding: 2rem; 
+    z-index: 10;
+    background: linear-gradient(to top, rgba(18,32,35,0.95) 0%, transparent 100%); 
+    color: var(--color-text);
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-end; 
+    opacity: 1; /* Siempre visible */
+    transform: translateY(0);
+}
+
+.project-name, .overlay-title { 
+    font-size: 2.5rem; 
+    line-height: 0.9; 
+    text-transform: uppercase; 
+    font-weight: 500; 
+    color: #fff; 
+    display: block; 
+    max-width: 70%; 
+}
+
+.project-meta, .overlay-cat { 
+    font-family: var(--font-mono); 
+    font-size: 0.85rem; 
+    text-transform: uppercase; 
+    opacity: 0.9; 
+    color: var(--color-lime); 
+    display: block; 
+    text-align: right; 
+}
+
+/* Project Hero */
+.project-hero-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    border-bottom: 1px solid var(--grid-line-color);
+}
+
+.project-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.project-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.project-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 var(--spacing-margin) 4rem;
+}
+
+.project-meta-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem var(--spacing-margin);
+    border-top: 1px solid var(--grid-line-color);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+/* --- HEADER CON DETECCIÓN AUTOMÁTICA --- */
+.header {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: var(--header-height);
+    background-color: transparent; 
+    border-bottom: 1px solid rgba(255,255,255,0);
+    z-index: 1000; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 3rem;
+    transition: all 0.4s ease;
+    
+    /* Por defecto: texto blanco */
+    color: var(--color-text); 
+}
+
+.header.is-scrolled { 
+    background-color: rgba(18, 32, 35, 0.95); 
+    backdrop-filter: blur(12px); 
+    border-bottom: 1px solid var(--grid-line-color);
+}
+
+/* MODO OSCURO: Cuando el fondo es claro (detección automática) */
+.header.dark-logo { 
+    color: var(--color-bg) !important;
+}
+
+.header.dark-logo .nav-link {
+    color: var(--color-bg) !important;
+}
+
+.header.dark-logo .nav-link:hover,
+.header.dark-logo .nav-link.active {
+    color: var(--color-accent) !important;
+}
+
+.header.dark-logo .hamburger span {
+    background: var(--color-bg) !important;
+}
+
+/* LOGO */
+.brand-name { 
+    font-weight: 700; 
+    font-size: 1.2rem; 
+    text-transform: uppercase; 
+    letter-spacing: 0.05em; 
+    color: currentColor;
+    position: relative;
+    z-index: 1001;
+}
+
+.brand-name img { 
+    height: 26px; 
+    width: auto;
+    display: block;
+    /* Por defecto: logo blanco */
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+/* Logo negro cuando header está en modo dark */
+.header.dark-logo .brand-name img { 
+    filter: brightness(0) invert(0) !important;
+}
+
+/* En scroll, logo siempre blanco */
+.header.is-scrolled .brand-name img {
+    filter: brightness(0) invert(1) !important;
+}
+
+.header.is-scrolled.dark-logo .brand-name img {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* NAVEGACIÓN */
+.nav-menu { 
+    display: flex; 
+    gap: 3rem; 
+    height: 100%; 
+    align-items: center; 
+    margin-left: auto; 
+}
+
+.nav-link { 
+    font-weight: 500; 
+    text-transform: uppercase; 
+    letter-spacing: 0.05em; 
+    font-size: 0.9rem; 
+    opacity: 0.8; 
+    transition: all 0.3s; 
+    position: relative; 
+    color: currentColor;
+}
+
+.nav-link:hover, 
+.nav-link.active { 
+    opacity: 1; 
+    color: var(--color-lime); 
+}
+
+/* --- BOTÓN DE SONIDO --- */
+.sound-toggle {
+    position: fixed; 
+    bottom: 2rem; 
+    right: 2rem; 
+    z-index: 1001;
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+    background: rgba(18, 32, 35, 0.6); 
+    backdrop-filter: blur(10px);
+    padding: 10px 20px; 
+    border-radius: 50px; 
+    cursor: pointer; 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease; 
+    color: var(--color-text);
+}
+
+.sound-toggle:hover { 
+    background: rgba(255, 255, 255, 0.1); 
+    border-color: var(--color-lime); 
+}
+
+.sound-bars { 
+    display: flex; 
+    gap: 3px; 
+    height: 12px; 
+    align-items: center; 
+}
+
+.bar { 
+    width: 2px; 
+    background-color: currentColor; 
+    height: 100%; 
+    border-radius: 2px; 
+    animation: none; 
+}
+
+.sound-active .bar { 
+    animation: sound-eq 0.8s infinite ease-in-out; 
+}
+
+.sound-active .bar:nth-child(1) { animation-delay: 0s; } 
+.sound-active .bar:nth-child(2) { animation-delay: 0.2s; } 
+.sound-active .bar:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes sound-eq { 
+    0% { height: 4px; } 
+    50% { height: 12px; } 
+    100% { height: 4px; } 
+}
+
+/* --- HAMBURGER --- */
+.hamburger { 
+    display: none; 
+    cursor: pointer; 
+    width: 30px; 
+    height: 20px; 
+    position: relative; 
+    z-index: 2100; 
+    color: currentColor; 
+}
+
+.hamburger span { 
+    display: block; 
+    position: absolute; 
+    height: 2px; 
+    width: 100%; 
+    background: currentColor; 
+    transition: .25s ease-in-out; 
+}
+
+.hamburger span:nth-child(1) { top: 0px; } 
+.hamburger span:nth-child(2) { top: 8px; } 
+.hamburger span:nth-child(3) { top: 16px; }
+
+.hamburger.open span:nth-child(1) { 
+    transform: rotate(45deg); 
+    top: 8px; 
+} 
+
+.hamburger.open span:nth-child(2) { 
+    opacity: 0; 
+} 
+
+.hamburger.open span:nth-child(3) { 
+    transform: rotate(-45deg); 
+    top: 8px; 
+}
+
+/* --- MOBILE NAV --- */
+.mobile-nav-overlay {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100vh;
+    background-color: var(--color-bg); 
+    z-index: 10000 !important;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 2rem;
+    transform: translateY(-100%); 
+    opacity: 0; 
+    pointer-events: none;
+    transition: transform 0.6s var(--ease-out-expo), opacity 0.4s ease;
+}
+
+.mobile-nav-overlay.active { 
+    transform: translateY(0); 
+    opacity: 1; 
+    pointer-events: all; 
+}
+
+.mobile-link { 
+    font-size: 3rem; 
+    font-weight: 500; 
+    text-transform: uppercase; 
+    color: var(--color-text); 
+    letter-spacing: -0.02em; 
+}
+
+/* --- FILTROS --- */
+.filter-container { 
+    display: flex; 
+    gap: 10px; 
+    flex-wrap: wrap; 
+    width: 100%; 
+}
+
+.filter-btn { 
+    background: transparent; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    padding: 10px 24px; 
+    border-radius: 50px; 
+    font-family: var(--font-mono); 
+    text-transform: uppercase; 
+    font-weight: 600; 
+    font-size: 0.8rem; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    color: var(--color-text); 
+    opacity: 0.7;
+}
+
+.filter-btn:hover, 
+.filter-btn.active { 
+    background-color: var(--color-lime); 
+    color: var(--color-bg); 
+    border-color: var(--color-lime); 
+    opacity: 1; 
+}
+
+/* --- SERVICIOS & ACORDEÓN --- */
+.service-list-container,
+.accordion-container {
+    width: 100%;
+}
+
+.service-accordion-item,
+.accordion-item { 
+    border-bottom: 1px solid rgba(255,255,255,0.1); 
+    padding: 2rem 0; 
+    cursor: pointer; 
+    overflow: hidden; 
+}
+
+.service-header,
+.accordion-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    background: none;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.service-header h3,
+.accordion-header .accordion-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.service-icon,
+.accordion-icon {
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.service-accordion-item.active .service-icon,
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.service-content,
+.accordion-content { 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.5s ease; 
+    padding-left: 0;
+}
+
+.service-accordion-item.active .service-content,
+.accordion-item.active .accordion-content { 
+    max-height: 1000px; 
+    padding-top: 2rem;
+}
+
+.accordion-body {
+    padding: 1rem 0;
+}
+
+.service-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-detail-col h4 {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    margin-bottom: 1rem;
+}
+
+.service-detail-col p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.service-detail-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-detail-col li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.service-tools-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tools-label {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+.tool-badge {
+    background: rgba(255,255,255,0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tool-badge i { 
+    color: var(--color-lime); 
+}
+
+/* NARRATIVA DETALLE (RESTAURADA) */
+#dyn-narrative-container .project-item img { position: absolute !important; height: 120% !important; filter: none !important; opacity: 1 !important; top: -10% !important; }
+#dyn-narrative-container .project-item { min-height: 80vh !important; }
+#dyn-narrative-container .col-span-6 { min-height: 60vh !important; }
+
+
+/* Hover Reveal Image */
+.hover-reveal-img {
+    position: fixed; 
+    width: 300px; 
+    height: 400px; 
+    top: 0; 
+    left: 0;
+    pointer-events: none; 
+    opacity: 0; 
+    transform: scale(0.8);
+    transition: opacity 0.3s, transform 0.3s; 
+    z-index: 10; 
+    overflow: hidden;
+}
+
+.hover-reveal-img img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.hover-reveal-img.active { 
+    opacity: 1; 
+    transform: scale(1); 
+}
+
+/* --- TOOLS INLINE --- */
+.tools-inline-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tool-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.tool-item i {
+    color: var(--color-lime);
+}
+
+/* --- NARRATIVA DE PROYECTO (SISTEMA PREMIUM) --- */
+.narrative-container {
+    width: 100%;
+    background-color: var(--color-bg);
+}
+
+.narrative-block {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+    padding: 12vh 0; /* Espaciado editorial */
+    border-bottom: 1px solid var(--grid-line-color);
+    align-items: center;
+}
+
+.narrative-block.layout-full { display: block; padding: 0; border-bottom: none; }
+.narrative-block.layout-full img { width: 100%; height: auto; max-height: 100vh; object-fit: cover; }
+
+.narrative-image-side { grid-column: span 7; padding: 0 var(--spacing-margin); }
+.narrative-text-side { grid-column: span 5; padding: 0 var(--spacing-margin); }
+
+/* Intercalado de contenido */
+.narrative-block.layout-text-left .narrative-text-side { grid-column: 1 / span 5; order: 1; }
+.narrative-block.layout-text-left .narrative-image-side { grid-column: 6 / span 7; order: 2; }
+.narrative-block.layout-text-right .narrative-image-side { grid-column: 1 / span 7; order: 1; }
+.narrative-block.layout-text-right .narrative-text-side { grid-column: 8 / span 5; order: 2; }
+
+.narrative-block.layout-contained { display: flex; justify-content: center; padding: 15vh var(--spacing-margin); }
+.narrative-block.layout-contained img { max-width: 80%; height: auto; }
+
+.narrative-block.layout-dual { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: var(--spacing-margin); }
+
+.narrative-description {
+    font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+    line-height: 1.6;
+    font-weight: 300;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s var(--ease-out-expo), transform 1.2s var(--ease-out-expo);
+}
+
+.narrative-block.active .narrative-description { opacity: 1; transform: translateY(0); }
+.narrative-image-side img { width: 100%; height: auto; display: block; }
+
+
+/* --- FOOTER --- */
+/* 1. Contenedor principal del footer */
+.footer-container {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 8vh var(--spacing-margin) !important;
+}
+
+/* 2. El Email (Grande) */
+.footer-email {
+    font-size: clamp(6rem, 10vw, 8rem) !important; /* Recuperamos el tamaño gigante */
+    line-height: 0.9 !important;
+    font-weight: 500 !important;
+    margin-bottom: 8vh !important;
+    display: block !important;
+    text-decoration: none !important;
+    color: var(--color-text) !important;
+}
+
+/* 3. La fila inferior (Redes a la izq, Copyright a la der) */
+.footer-bottom-row {
+    display: flex !important;
+    flex-direction: row !important; /* Fuerza la horizontalidad */
+    justify-content: space-between !important; /* Empuja extremos */
+    align-items: center !important;
+    border-top: 1px solid var(--grid-line-color) !important;
+    padding-top: 2rem !important;
+    width: 100% !important;
+}
+
+/* 4. Social Links (Izquierda) */
+.footer-social-links {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 3rem !important; /* Espacio entre links */
+}
+
+/* 5. Copyright (Derecha) */
+.footer-bottom-row > div:last-child {
+    text-align: right !important;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+/* =========================================================================
+   MÓDULO: IMAGE TICKER (Carrusel de Logos)
+   ========================================================================= */
+
+.ticker-container {
+    overflow: hidden;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.02); /* Un fondo súper sutil */
+    padding: 6vh 0 !important; /* Reducimos el colchón vertical para que no ocupe tanta pantalla */
+    margin: 5vh 0 !important;
+    border-top: 1px solid var(--grid-line-color) !important;
+    border-bottom: 1px solid var(--grid-line-color) !important;
+}
+
+/* Alineamos los logos al centro para que, si unos son más altos que otros, se vean ordenados */
+.ticker-track {
+    align-items: center !important; 
+}
+
+.ticker-logo {
+    /* CLAVE: La altura escala desde 35px en móvil hasta un MÁXIMO de 70px en web */
+    height: clamp(35px, 5vw, 70px) !important; 
+    width: auto !important;
+    /* El margen entre logos también es fluido */
+    margin-right: clamp(40px, 6vw, 100px) !important; 
+    filter: grayscale(1) !important; /* Mantiene el look monocromático */
+    opacity: 0.6 !important;
+    transition: opacity 0.3s ease !important;
+}
+
+/* Un toque premium: Al pasar el mouse, el logo se ilumina */
+.ticker-logo:hover {
+    opacity: 1 !important;
+}
+
+/* --- FORMULARIOS --- */
+.contact-form input, 
+.contact-form textarea {
+    width: 100%; 
+    background: transparent !important; 
+    border: none !important; 
+    border-bottom: 1px solid rgba(255,255,255,0.2) !important; 
+    padding: 20px 0 !important; 
+    font-family: var(--font-main) !important; 
+    font-size: 1.5rem !important; 
+    color: var(--color-text) !important; 
+    outline: none !important; 
+    transition: border-color 0.3s;
+    border-radius: 0; 
+    -webkit-appearance: none;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus { 
+    border-bottom-color: var(--color-lime) !important; 
+}
+
+button[type="submit"] {
+    transition: all 0.3s ease; 
+    position: relative; 
+    overflow: hidden; 
+    z-index: 1; 
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-bg) !important; 
+    color: var(--color-lime) !important;
+    transform: translateY(-3px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE - SPACING CONSISTENTE
+   ========================================== */
+
+@media (max-width: 900px) {
+    /* === SPACING MÓVIL CONSISTENTE === */
+    
+    /* Hero Container */
+    .hero-container { 
+        padding: var(--spacing-mobile-y-large) var(--spacing-mobile-x) var(--spacing-mobile-y-large) var(--spacing-mobile-x); 
+        justify-content: flex-end; 
+        min-height: 80vh;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        padding: var(--spacing-mobile-y-large) var(--spacing-mobile-x);
+        min-height: 60vh;
+    }
+    
+    .hero-content-grid { 
+        display: flex; 
+        flex-direction: column; 
+        gap: 1rem; 
+        padding: 0; 
+    }
+    
+    .hero-top-info { 
+        position: static; 
+        margin-bottom: 2rem;
+        font-size: 0.7rem;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    
+    /* TEXTOS MÓVIL MEJORADOS */
+    .text-subhead { 
+        font-size: 1.3rem !important; 
+        margin-bottom: 1rem; 
+        line-height: 1.3;
+        max-width: 100%;
+    }
+    
+    .text-body {
+        font-size: 1rem !important;
+        line-height: 1.7;
+        max-width: 100%;
+        opacity: 0.9;
+    }
+    
+    .display-text {
+        font-size: clamp(1.8rem, 11vw, 3rem) !important;
+        line-height: 1 !important;
+        letter-spacing: -0.01em;
+    }
+    
+    /* Bento Grid y Gallery */
+    .bento-grid, .gallery-grid-section-variable { 
+        grid-template-columns: 1fr; 
+        padding: 0 var(--spacing-mobile-x); 
+    }
+    
+    .col-span-12, .col-span-8, .col-span-7, .col-span-6, .col-span-5, .col-span-4, .col-span-3 { 
+        grid-column: span 1; 
+    }
+    
+    .item-normal, .item-large, .item-wide { 
+        grid-column: span 1; 
+        aspect-ratio: auto; 
+        min-height: 400px; 
+    }
+    
+    /* Cells - Padding consistente */
+    .cell { 
+        padding: var(--spacing-mobile-y-medium) var(--spacing-mobile-x); 
+        border-right: none; 
+    }
+    
+    /* Header */
+    .header { 
+        padding: 0 var(--spacing-mobile-x); 
+        height: 70px;
+    }
+    
+    .brand-name img {
+        height: 22px;
+    }
+    
+    .nav-menu { display: none; } 
+    .hamburger { display: block;  }
+
+     /* Necesario para que el z-index funcione */
+}
+    
+    /* MOBILE: FORZAR IMÁGENES A COLOR */
+    .project-item img, .gallery-item img,
+.project-item video, .gallery-item video {
+    position: absolute; 
+    top: -10%; 
+    left: 0; 
+    width: 100%; 
+    height: 120%; 
+    object-fit: cover; 
+    opacity: 0.85; 
+    filter: grayscale(100%); 
+    z-index: 1;
+    /* EFECTO PREMIUM: Transición cinematográfica de 1.6s con zoom */
+    transition: transform 1.6s var(--ease-out-expo), filter 0.5s ease, opacity 0.5s ease;
+    will-change: transform; 
+}
+
+/* HOVER PREMIUM: Zoom + Color */
+.project-item:hover img, 
+.gallery-item:hover img,
+.project-item:hover video, 
+.gallery-item:hover video { 
+    filter: grayscale(0%); 
+    opacity: 1; 
+    transform: scale(1.05); /* Zoom sutil - "efecto ventana" */
+}
+    
+    /* FOOTER MÓVIL - Spacing consistente */
+    .footer-container {
+        padding: var(--spacing-mobile-y-large) var(--spacing-mobile-x);
+    }
+    
+    .footer-main {
+        padding-bottom: var(--spacing-mobile-y-medium);
+    }
+    
+    .footer-bottom-row { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 2rem; 
+    }
+    
+    .footer-social-links { 
+        flex-direction: column; 
+        gap: 1rem; 
+    }
+    
+    .footer-email {
+        font-size: clamp(2rem, 10vw, 3rem) !important;
+        word-break: break-word;
+    }
+    
+    /* BLOQUES EDITORIALES MÓVIL - Spacing consistente */
+    .editorial-block { 
+        padding: var(--spacing-mobile-y-medium) var(--spacing-mobile-x); 
+        border-right: none;
+        border-bottom: 1px solid var(--grid-line-color);
+    }
+    
+    .editorial-text, .editorial-quote {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+    
+    .editorial-quote {
+        font-size: 1.5rem !important;
+        padding: var(--spacing-mobile-y-small) 0;
+    }
+    
+    /* TÍTULOS DE PROYECTO MÓVIL */
+    .project-title-large { 
+        font-size: clamp(2rem, 12vw, 3.5rem) !important;
+        line-height: 1;
+    }
+    
+    .project-subtitle-large {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    /* FILTROS MÓVIL */
+    .filter-container { 
+        display: flex; 
+        gap: 10px; 
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
+        padding-bottom: 10px; 
+        scrollbar-width: none; 
+    }
+    
+    /* STICKY CONTENT */
+    .sticky-content { 
+        position: relative; 
+        top: 0; 
+        margin-bottom: 2rem; 
+    }
+    
+    /* PROJECT INFO */
+    .project-info { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 0.5rem; 
+    }
+    
+    .project-name { 
+        max-width: 100%; 
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        line-height: 1.1;
+    }
+    
+    .project-meta { 
+        text-align: left;
+        font-size: 0.75rem;
+    }
+    
+    /* SERVICE & ACCORDION - Spacing consistente */
+    .service-list-container,
+    .accordion-container {
+        padding: 0 var(--spacing-mobile-x);
+    }
+    
+    .service-accordion-item,
+    .accordion-item {
+        padding: var(--spacing-mobile-y-small) 0;
+    }
+    
+    .service-detail-grid { 
+        grid-template-columns: 1fr; 
+        gap: 1.5rem;
+    }
+    
+    /* Mejorar espaciado en headers de acordeón móvil */
+    .service-header h3,
+    .accordion-header .accordion-title {
+        font-size: 1.2rem !important;
+    }
+    
+    /* Contact Form Mobile */
+    .contact-form {
+        padding: 0;
+    }
+    
+    /* Mobile Sound Toggle */
+    .sound-toggle { 
+        bottom: var(--spacing-mobile-x); 
+        right: var(--spacing-mobile-x); 
+        padding: 6px 12px; 
+        font-size: 0.7rem; 
+    }
+    
+    /* Asegurar spacing consistente en cualquier sección */
+    section {
+        padding-left: var(--spacing-mobile-x);
+        padding-right: var(--spacing-mobile-x);
+    }
+    
+    /* Herramientas inline */
+    .tools-inline-container {
+        padding: var(--spacing-mobile-y-small) 0;
+    }
+}
+
+/* ==========================================
+   MEJORAS DE ACCESIBILIDAD Y PULIDOS
+   ========================================== */
+
+/* Skip to Content - Accesibilidad */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-lime);
+    color: var(--color-bg);
+    padding: 8px 16px;
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    z-index: 100000;
+    transition: top 0.3s;
+}
+
+.skip-to-content:focus {
+    top: 0;
+    outline: 3px solid var(--color-accent);
+}
+
+/* Photo Cell - Para la imagen de about.html */
+.photo-cell {
+    padding: 0 !important;
+    min-height: 600px;
+}
+
+@media (max-width: 900px) {
+    .photo-cell {
+        min-height: 400px;
+    }
+}
+
+/* Mejoras para el cursor custom */
+@media (hover: hover) and (pointer: fine) {
+    * { cursor: none; }
+    a, button, .service-card, .project-item, input, textarea { cursor: pointer !important; }
+}
+
+/* Focus visible para accesibilidad de teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* --- NARRATIVA DE PROYECTO --- */
+.narrative-block {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+    min-height: 80vh;
+    border-bottom: 1px solid var(--grid-line-color);
+    background-color: var(--color-bg);
+}
+
+.narrative-image-side {
+    grid-column: span 7;
+    height: 100%;
+    overflow: hidden;
+    border-right: 1px solid var(--grid-line-color);
+}
+
+.narrative-text-side {
+    grid-column: span 5;
+    padding: 4rem var(--spacing-margin);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-bg);
+}
+
+.narrative-description {
+    font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+    line-height: 1.6;
+    opacity: 0.9;
+    font-weight: 300;
+    max-width: 40ch;
+}
+
+/* Ajuste para móvil */
+@media (max-width: 900px) {
+    .narrative-block {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    .narrative-image-side {
+        grid-column: span 1;
+        height: 50vh;
+        border-right: none;
+        border-bottom: 1px solid var(--grid-line-color);
+        order: 1 !important; /* Imagen siempre arriba en móvil */
+    }
+    .narrative-text-side {
+        grid-column: span 1;
+        padding: var(--spacing-mobile-y-medium) var(--spacing-mobile-x);
+        order: 2 !important;
+    }
+}
+
+/* ==========================================
+   MÓDULOS INMERSIVOS (PARA PROJECT DETAILS)
+   ========================================== */
+
+/* 1. LIVE PORTAL (BROWSER) */
+.browser-mockup {
+    width: 95%; max-width: 1200px; margin: 8vh auto; background: #1e1e1e; border-radius: 12px;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.5); overflow: hidden; border: 1px solid rgba(255,255,255,0.1);
+}
+.browser-top-bar { height: 40px; background: #2d2d2d; display: flex; align-items: center; padding: 0 15px; gap: 8px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.dot.red { background: #ff5f56; } .dot.yellow { background: #ffbd2e; } .dot.green { background: #27c93f; }
+.browser-address { flex-grow: 1; height: 24px; background: rgba(255,255,255,0.05); border-radius: 4px; margin-left: 20px; display: flex; align-items: center; padding: 0 10px; font-size: 10px; color: rgba(255,255,255,0.3); font-family: var(--font-mono); }
+.btn-explore { display: inline-block; padding: 1rem 2.5rem; background: var(--color-lime); color: var(--color-bg); border-radius: 50px; font-family: var(--font-mono); font-weight: 700; text-transform: uppercase; transition: 0.3s var(--ease-out-expo); }
+
+/* 2. EDITORIAL SLIDER (HORIZONTAL) */
+.horizontal-slider-section { 
+    width: 100%; 
+    height: 100vh; 
+    overflow: hidden; 
+    background: var(--color-bg); 
+    display: flex; 
+    align-items: center; 
+}
+
+.horizontal-container { 
+    display: flex; 
+    height: 75vh; 
+    padding-left: var(--spacing-margin); 
+    width: max-content; /* AGREGADO: Esencial para que el scroll calcule bien el final con imágenes dinámicas */
+    will-change: transform; 
+}
+
+.editorial-page { 
+    flex-shrink: 0; 
+    width: auto; 
+    height: 100%; 
+    margin-right: 4vw; /* CAMBIO CLAVE: Usar margin en vez de padding para separar los proyectos */
+    position: relative; 
+}
+
+.editorial-page img { 
+    width: auto; 
+    height: 100%; 
+    object-fit: contain; 
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.4); 
+}
+
+/* 1. Capa de gradiente (Ahora calza perfecto con la imagen) */
+.editorial-page::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Al usar margin, el 100% corresponde exactamente al tamaño de la foto */
+    height: 50%; 
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    opacity: 0 !important; 
+    pointer-events: none; 
+    transition: opacity 0.4s ease;
+}
+
+/* 2. ESTADO INICIAL DEL TEXTO */
+.editorial-page .editorial-caption { 
+    position: absolute !important;
+    bottom: 40px !important; 
+    left: 40px !important;   
+    right: 40px !important; /* Mantiene el texto alineado sin salirse de la foto */
+    color: #ffffff !important;
+    z-index: 2 !important;
+    opacity: 0 !important;          
+    pointer-events: none !important;
+    transition: opacity 0.4s ease !important;
+}
+
+/* 3. EL COMPORTAMIENTO HOVER */
+.editorial-page:hover::after,
+.editorial-page:hover .editorial-caption {
+    opacity: 1 !important; 
+}
+
+/* 3. IMAGE TICKER */
+@keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.ticker-track { display: flex; align-items: center; width: fit-content; will-change: transform; }
+
+/* 4. COMPARISON SLIDER */
+/* =========================================================================
+   MÓDULO: COMPARISON SLIDER (Centrado perfecto y línea Lime)
+   ========================================================================= */
+
+.comparison-container {
+    /* Convierte el contenedor en una regla de medir para que la imagen no se escape */
+    container-type: inline-size; 
+    position: relative; 
+    width: 100%; 
+    overflow: hidden; 
+    cursor: ew-resize;
+    max-height: 500px;
+}
+
+/* Imagen de fondo (La que manda en la proporción de la altura) */
+.comp-after-img {
+    display: block;
+    width: 100%;
+    height: auto !important; /* Respeta la proporción nativa de la foto */
+    object-fit: cover;
+}
+
+/* La cortina superpuesta con tu línea original */
+.comp-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    /* ¡Recuperamos tu línea distintiva de color lime! */
+    border-right: 2px solid var(--color-lime); 
+    z-index: 2;
+}
+
+/* Imagen superpuesta (El truco maestro del 100cqw) */
+.comp-before-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 100cqw significa "100% del ancho del contenedor", no de la pantalla. ¡Adiós desfase! */
+    width: 100cqw !important; 
+    height: 100% !important;
+    object-fit: cover;
+    object-position: left center; 
+    max-width: none;
+}
+
+/* --- 5. NARRATIVA DE PROYECTO (LAS REGLAS QUE BUSCABAS) --- */
+.narrative-block { 
+    display: grid; grid-template-columns: repeat(12, 1fr); width: 100%; 
+    min-height: 85vh; border-bottom: 1px solid var(--grid-line-color); align-items: center; 
+}
+
+/* Layout Full Image */
+.narrative-block.layout-full { display: block; min-height: auto; padding: 0; border-bottom: none; }
+.narrative-block.layout-full img { width: 100%; height: auto; max-height: 100vh; object-fit: cover; }
+
+/* Columnas base */
+.narrative-image-side { grid-column: span 7; height: 100%; overflow: hidden; }
+.narrative-text-side { grid-column: span 5; padding: 6rem var(--spacing-margin); display: flex; flex-direction: column; justify-content: center; background-color: var(--color-bg); }
+
+/* layout: "text-right" -> Imagen a la izquierda (1-7), Texto a la derecha (8-12) */
+.narrative-block.layout-text-right .narrative-image-side { grid-column: 1 / span 7; order: 1; border-right: 1px solid var(--grid-line-color); }
+.narrative-block.layout-text-right .narrative-text-side { grid-column: 8 / span 5; order: 2; }
+
+/* layout: "text-left" -> Texto a la izquierda (1-5), Imagen a la derecha (6-12) */
+.narrative-block.layout-text-left .narrative-text-side { grid-column: 1 / span 5; order: 1; border-right: 1px solid var(--grid-line-color); }
+.narrative-block.layout-text-left .narrative-image-side { grid-column: 6 / span 7; order: 2; }
+
+.narrative-description { font-size: clamp(1.1rem, 1.8vw, 1.4rem); line-height: 1.6; opacity: 0.9; font-weight: 300; max-width: 40ch; }
+.narrative-image-side img { width: 100%; height: 100%; object-fit: cover; }
+
+/* --- 6. HOVER REVEAL (INFO) --- */
+.hover-reveal-img { position: fixed; width: 300px; height: 400px; top: 0; left: 0; pointer-events: none; opacity: 0; transform: scale(0.8); transition: opacity 0.3s, transform 0.3s; z-index: 10; overflow: hidden; }
+.hover-reveal-img img { width: 100%; height: 100%; object-fit: cover; }
+.hover-reveal-img.active { opacity: 1; transform: scale(1); }
+
+
+
+/* --- FOOTER --- */
+.footer-container { border-top: 1px solid var(--grid-line-color); padding: 6rem var(--spacing-margin) 4rem; display: flex; flex-direction: column; min-height: 50vh; }
+.footer-email { font-size: clamp(2.5rem, 8vw, 7rem); line-height: 1; font-weight: 500; transition: color 0.3s; }
+.footer-email:hover { color: var(--color-lime); }
+.footer-bottom-row { display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; margin-top: auto; font-family: var(--font-mono); font-size: 0.85rem; opacity: 0.7; text-transform: uppercase; }
+
+/* --- ACORDEONES --- */
+.service-accordion-item { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 2rem 0; cursor: pointer; }
+.service-header { display: flex; justify-content: space-between; align-items: center; }
+.service-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+.service-accordion-item.active .service-content { max-height: 1000px; padding-top: 2rem; }
+.service-accordion-item.active .ph-plus { transform: rotate(45deg); }
+
+
+/* --- SUBTÍTULOS CINEMATOGRÁFICOS EN SLIDER EDITORIAL --- */
+
+/* 1. Quitamos los espacios invisibles para que el hover sea exacto a la foto */
+.editorial-page {
+    display: inline-block; 
+    position: relative;
+    line-height: 0; /* Magia: Esto elimina el milímetro extra debajo de la imagen que atascaba el mouse */
+}
+
+/* 2. SOLO creamos el degradado si la caja tiene la clase .has-caption */
+.editorial-page.has-caption::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%; 
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease-out; /* Lo hicimos un poco más rápido para evitar lag al quitar el mouse */
+    pointer-events: none; 
+    z-index: 1;
+}
+
+.editorial-caption {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    color: #ffffff;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.3s ease-out;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+    pointer-events: none; 
+    line-height: 1.5;
+    /* --- NUEVO: Le damos el estilo de texto directamente aquí --- */
+    font-size: clamp(0.95rem, 2vw, 1.1rem); 
+    font-weight: 300;
+}
+/* Asegura que tanto los videos como las fotos del slider editorial se comporten igual */
+.editorial-media-element {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    pointer-events: none; /* Evita que el video bloquee los eventos de hover del contenedor */
+}
+
+/* 3. SOLO aplicamos el hover si tiene la clase .has-caption */
+.editorial-page.has-caption:hover::after {
+    opacity: 1;
+}
+
+.editorial-page.has-caption:hover .editorial-caption {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+/* Hover nativo del navegador, mucho más rápido y sin atascos */
+.editorial-page:hover::after {
+    opacity: 1;
+}
+
+.editorial-page:hover .editorial-caption {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+/* Animaciones controladas por JS para evitar atascos en el scroll */
+.editorial-page.is-hovered::after {
+    opacity: 1;
+}
+
+.editorial-page.is-hovered .editorial-caption {
+    opacity: 1;
+    transform: translateY(0); 
+}
+/* --- NARRATIVE CENTER (TEXTO DE INTENCIÓN - CINEMÁTICO Y SIN TÍTULO) --- */
+.narrative-center-container {
+    padding: 18vh var(--spacing-margin);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid var(--grid-line-color);
+    background-color: var(--color-bg);
+}
+
+.narrative-center-text {
+    max-width: 55ch; 
+    font-size: 1.7rem !important;
+    line-height: 1.6; 
+    font-weight: 300;
+    color: var(--color-text);
+    letter-spacing: 0.01em; 
+    
+    /* ESTADO 1: Oculto y hundido (esperando el scroll) */
+    opacity: 0;
+    transform: translateY(40px);
+    /* Una transición ultra suave y madura */
+    transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), 
+                transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ESTADO 2: Revelado (activado por el JS) */
+.narrative-center-text.is-visible {
+    opacity: 0.9; /* Opacidad sutil para no cansar la vista */
+    transform: translateY(0);
+}
+/* --- IMPACT GRID (ESTADÍSTICAS Y MÉTRICAS - FIX HORIZONTAL) --- */
+.impact-grid-container {
+    display: grid;
+    /* Esto garantiza que se abran horizontalmente hasta 4 columnas en pantallas grandes */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    width: 100%;
+    border-top: 1px solid var(--grid-line-color);
+    border-bottom: 1px solid var(--grid-line-color);
+    background-color: var(--color-bg);
+}
+
+.impact-item {
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid var(--grid-line-color);
+}
+
+/* Le quitamos el borde derecho al último ítem */
+.impact-item:last-child {
+    border-right: none;
+}
+
+.impact-number {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+    line-height: 1;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    font-variant-numeric: tabular-nums; 
+}
+
+.impact-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+    color: var(--color-text);
+}
+
+/* --- ADAPTACIÓN MÓVIL OPTIMIZADA ESTRICTA --- */
+@media (max-width: 768px) {
+    .impact-grid-container {
+        /* En celulares rompemos el flujo horizontal para que sea cómodo de leer hacia abajo */
+        grid-template-columns: 1fr;
+    }
+    .impact-item {
+        border-right: none;
+        border-bottom: 1px solid var(--grid-line-color);
+        padding: 3rem 1.5rem;
+    }
+    .impact-item:last-child {
+        border-bottom: none;
+    }
+}
+/* Ajuste móvil para que las líneas se acomoden horizontalmente en celulares */
+@media (max-width: 768px) {
+Diseño ultra-compacto para móvil: menos alto y más directo */
+    .impact-grid-container {
+        display: grid !important;
+        grid-template-columns: 1fr !important; /* Una sola columna */
+        gap: 1.5rem !important; /* REDUCIDO: Cortamos el espacio entre bloques a la mitad */
+        text-align: center !important;
+        padding: 2vh 0 !important; /* Reducimos el colchón del contenedor */
+    }
+
+    .impact-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0.5rem 0 !important; /* Comprime la altura individual de cada métrica */
+    }
+
+    .impact-number {
+        /* Calibramos el tamaño para móvil para que sea grande pero no gigante */
+        font-size: clamp(2.5rem, 10vw, 3.5rem) !important; 
+        line-height: 1.1 !important; /* Evita que el texto flote con aire extra */
+        margin-bottom: 0.25rem !important; /* Pega el número a su texto descriptivo */
+        letter-spacing: -0.03em !important;
+    }
+
+    .impact-label {
+        font-size: 0.85rem !important; /* Un poco más pequeña y delicada */
+        line-height: 1.3 !important;
+        max-width: 250px !important; /* Evita que el texto de la etiqueta se ensanche mucho */
+        opacity: 0.7 !important;
+    }
+    
+    /* Si el bloque contenedor principal tiene un padding global muy alto, lo recortamos aquí */
+    .reveal-element:has(.impact-grid-container) {
+        padding-top: 4vh !important;
+        padding-bottom: 4vh !important;
+    }
+
+/* Garantiza que los videos y fotos del layout estándar llenen su contenedor limpiamente */
+.media-element {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* --- VISOR 3D INTERACTIVO --- */
+.model-3d-container {
+    width: 100%;
+    height: 75vh; /* Ocupa una altura generosa y elegante en la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--grid-line-color);
+    padding: 2rem;
+    overflow: hidden;
+}
+
+/* Cambios de cursor para indicarle al usuario que puede arrastrar el objeto */
+model-viewer {
+    outline: none;
+    cursor: grab;
+}
+
+model-viewer:active {
+    cursor: grabbing;
+}
+
+/* --- BENTO GALLERY PREMIUM --- */
+/* Une el bloque Bento al sistema de revelado suave de tu web */
+/* --- ANIMACIÓN PREMIUM SUTIL PARA EL BENTO --- */
+
+/* 1. Eliminamos cualquier peligro de desaparición en el contenedor principal */
+.bento-grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.5rem;
+    padding: 8vh var(--spacing-margin);
+    width: 100%;
+    opacity: 1 !important; /* Garantiza que NUNCA desaparezca el bloque */
+}
+
+/* 2. Le damos a las tarjetas un estado inicial sutil al cargar */
+.bento-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0;
+    transform: translateY(15px);
+    /* Una transición fluida que se dispara sola al cargar el bloque en pantalla */
+    animation: bentoReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 3. Creamos el efecto de entrada cinematográfico */
+@keyframes bentoReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 4. Escalamos los tiempos para que las tarjetas aparezcan en "cascada" (sofisticación pura) */
+.bento-card:nth-child(1) .bento-card-inner { animation-delay: 0.1s; }
+.bento-card:nth-child(2) .bento-card-inner { animation-delay: 0.2s5; }
+.bento-card:nth-child(3) .bento-card-inner { animation-delay: 0.4s; }
+.bento-card:nth-child(4) .bento-card-inner { animation-delay: 0.55s; }
+
+.bento-card {
+    background-color: rgba(255, 255, 255, 0.02); /* Fondo sutil por defecto */
+    border: 1px solid var(--grid-line-color);
+    overflow: hidden;
+    position: relative;
+    min-height: 40vh; /* Altura base elegante */
+    display: flex;
+}
+
+.bento-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Comportamiento de las imágenes y videos dentro del Bento */
+.bento-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Efecto sutil de zoom al pasar el mouse por las tarjetas visuales */
+.bento-card:hover .bento-media {
+    transform: scale(1.02);
+}
+
+/* Estilo para las tarjetas de texto explicativo */
+.bento-text-content {
+    padding: 3rem 2.5rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;    /* Mantiene el flujo de arriba hacia abajo */
+    justify-content: flex-end; /* Alinea todo el bloque en la base de la tarjeta */
+    background: transparent;   /* Eliminado el degradado extraño */
+}
+
+.bento-card-title {
+    font-size: 0.75rem;
+    font-family: var(--font-mono); 
+    letter-spacing: 0.12em;
+    opacity: 0.4;
+    margin-bottom: 0.75rem;    /* Espacio perfecto antes del párrafo */
+    text-transform: uppercase;
+}
+
+.bento-card {
+    background-color: transparent; /* Ahora el fondo es 100% limpio y transparente */
+    border: 1px solid var(--grid-line-color); /* Mantenemos solo la línea fina de la grilla */
+    overflow: hidden;
+    position: relative;
+    min-height: 40vh; 
+    display: flex;
+}
+
+/* RESPONSIVE: En celulares colapsa de forma natural a bloques apilados */
+@media (max-width: 768px) {
+    .bento-grid-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 4vh var(--spacing-margin);
+    }
+    
+    .bento-card, 
+    .bento-card.col-span-8, 
+    .bento-card.col-span-6, 
+    .bento-card.col-span-4 {
+        grid-column: span 1 / span 1 !important;
+        min-height: 35vh;
+    }
+    
+    .bento-text-content {
+        padding: 1.5rem;
+    }
+}
+/* =========================================================================
+   ESTRUCTURA DE TRAYECTORIA Y TIMELINE MINIMALISTA 
+   ========================================================================= */
+.about-experience-section {
+    padding: 12vh var(--spacing-margin) !important;
+    border-bottom: 1px solid var(--grid-line-color) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6vh !important;
+}
+
+.accent-lime {
+    color: var(--color-lime) !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    display: block !important;
+    margin-bottom: 1rem !important;
+}
+
+.timeline-container {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+}
+
+.timeline-item {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    padding: 3.5rem 0 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0 !important;
+}
+
+.timeline-year {
+    grid-column: span 2 !important;
+    font-size: 1.1rem !important;
+    color: var(--color-lime) !important;
+    font-weight: 400 !important;
+}
+
+.timeline-content {
+    grid-column: span 10 !important;
+    max-width: 75ch !important; /* Lectura descansada */
+}
+
+.timeline-role {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: clamp(1.2rem, 2vw, 1.5rem) !important;
+    font-weight: 400 !important;
+    color: #ffffff !important;
+    margin-bottom: 1rem !important;
+    letter-spacing: -0.01em !important;
+}
+
+.timeline-type {
+    font-family: var(--font-mono, monospace) !important;
+    font-size: 0.75rem !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    margin-left: 0.5rem !important;
+}
+/* =========================================================================
+   SOLUCIÓN: UNIFICACIÓN DE FILTRO HOVER BLANCO Y NEGRO PARA PORTADAS DE VIDEO
+   ========================================================================= */
+
+/* 1. Inicializa el video de la grilla en Blanco y Negro por defecto */
+.project-item video, 
+.gallery-item video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 0.85; 
+    filter: grayscale(100%) !important; 
+    z-index: 1;
+    transition: transform 1.6s var(--ease-out-expo), filter 0.5s ease, opacity 0.5s ease !important;
+    will-change: transform; 
+    pointer-events: none; /* Evita que el video interfiera con el trigger del mouse */
+}
+
+/* 2. Aplica el Hover (Recupera color y zoom) al pasar por encima del contenedor */
+.project-item:hover video, 
+.gallery-item:hover video { 
+    filter: grayscale(0%) !important; 
+    opacity: 1 !important; 
+    transform: scale(1.05) !important; 
+}
+
+/* =========================================================
+   BLINDADO DEL HEADER (SOLO PARA LA PÁGINA DE PROYECTOS)
+   ========================================================= */
+/* =========================================================
+   OPTIMIZACIÓN MÓVIL: MÓDULOS DINÁMICOS DE PROYECTO
+   ========================================================= */
+@media (max-width: 768px) {
+    
+    /* 1. LIVE PORTAL (Navegador Mockup) 
+      /* =========================================================================
+   MÓDULO: LIVE PORTAL (Mockup y enlace a web)
+   ========================================================================= */
+
+.live-portal-container {
+    position: relative;
+    width: 100%;
+    border-radius: 8px; /* Bordes suaves para simular una pantalla */
+    overflow: hidden;
+    margin: 6vh 0 !important;
+    border: 1px solid var(--grid-line-color, rgba(255,255,255,0.1)); 
+    box-sizing: border-box;
+}
+
+.live-portal-img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: cover !important;
+    transition: transform 0.7s cubic-bezier(0.2, 1, 0.2, 1) !important;
+}
+
+/* La capa oscura que esconde el botón en web */
+.live-portal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 13, 13, 0.4); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Invisible por defecto */
+    transition: opacity 0.4s ease;
+}
+
+/* Al pasar el mouse: aparece el botón y la imagen hace un mini zoom */
+.live-portal-container:hover .live-portal-overlay {
+    opacity: 1;
+}
+
+.live-portal-container:hover .live-portal-img {
+    transform: scale(1.03) !important;
+}
+
+/* El botón flotante */
+.live-portal-btn {
+    background: var(--color-lime, #EFFF93);
+    color: #0D0D0D !important;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-family: var(--font-mono, monospace);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none !important;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.live-portal-btn:hover {
+    transform: scale(1.05);
+}
+
+/* -------------------------------------------------------------------------
+   OPTIMIZACIÓN MÓVIL
+   ------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .live-portal-overlay {
+        /* En celular forzamos a que el botón se vea siempre (no hay hover) */
+        opacity: 1 !important;
+        background: rgba(13, 13, 13, 0.3) !important; 
+    }
+    
+    .live-portal-btn {
+        padding: 12px 24px !important;
+        font-size: 0.75rem !important;
+    }
+}
+    /* 3. IMAGE TICKER (Carrusel Infinito)
+       Achicamos las imágenes de 220px a 130px para que entren mejor en la pantalla */
+    .ticker-track img {
+        height: 130px !important; 
+        margin-right: 40px !important;
+    }
+
+    /* 4. COMPARISON SLIDER 
+       Reducimos la altura para que el usuario pueda alcanzar a arrastrar el centro */
+    .comparison-container,
+    .comparison-container img,
+    .comp-before img {
+        height: 50vh !important; 
+    }
+
+    /* 5. IMPACT GRID (Métricas y Estadísticas)
+       Cambiamos de diseño horizontal a una columna centrada */
+    .impact-grid-container {
+        display: grid !important;
+        grid-template-columns: 1fr !important; /* Una sola columna */
+        gap: 3rem !important; /* Espacio respirable entre números */
+        text-align: center !important;
+    }
+
+    /* 6. LAYOUT ESTÁNDAR (Texto y Foto Lado a Lado)
+/* 6. LAYOUT ESTÁNDAR (Texto y Foto Lado a Lado)
+       Apilamos la foto arriba y el texto abajo con sus márgenes laterales correctos */
+    .narrative-block:not(.layout-full) {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+        /* CORREGIDO: Cambiamos 0 por tu variable de margen para que respire a los lados */
+        padding: 5vh var(--spacing-margin) !important; 
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    .narrative-image-side, 
+    .narrative-text-side {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Asegura que la imagen dentro del módulo estándar no se deforme en pantallas chicas */
+    .narrative-image-side img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+        border-radius: 4px !important;
+    }
+    /* 7. STATEMENT QUOTE (Concepto Estratégico)
+       Reducimos los colchones (padding) gigantes en celulares */
+    .reveal-element[style*="background: var(--color-lime)"] {
+        padding: 10vh var(--spacing-margin) !important; 
+    }
+}
+
+/* =========================================================
+       8. EDITORIAL SLIDER (Optimización Móvil + Guía Geométrica Premium)
+       ========================================================= */
+       
+    .horizontal-slider-section {
+        position: relative; /* Contenedor de la guía visual */
+    }
+    
+    .horizontal-container {
+        height: 55vh !important; /* Mantiene la proporción elegante */
+    }
+
+    .editorial-page .editorial-caption {
+        bottom: 20px !important;
+        left: 20px !important;
+        right: 20px !important;
+        font-size: 0.9rem !important;
+    }
+
+/* Ocultamos la barra en computador */
+    .mobile-progress-track {
+        display: none;
+    }
+
+    /* La mostramos y estilizamos solo en celular */
+@media (max-width: 768px) {
+    .mobile-progress-track {
+        display: block;
+        position: absolute;
+        bottom: 6vh;
+        left: 10%; 
+        width: 80%; 
+        height: 2px; /* Grosor de la pista gris de fondo */
+        background: rgba(255, 255, 255, 0.15); 
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    .mobile-progress-fill {
+        width: 0%; /* CLAVE: Arranca vacía al 0% */
+        height: 100%; 
+        background: var(--color-text, #EAEAEA); 
+        will-change: width; /* Le avisa al celular que esto se va a mover mucho */
+    }
+}
+
+
+/* =========================================================================
+   MÓDULO: BENTO GALLERY (A prueba de fallos)
+   ========================================================================= */
+
+.bento-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 20px !important;
+    width: 100% !important;
+    padding: 8vh var(--spacing-margin) !important;
+    box-sizing: border-box !important;
+}
+
+/* La imagen principal ocupa 2/3 del espacio */
+.bento-principal {
+    width: 66.66% !important;
+    height: 60vh !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+}
+
+/* La imagen secundaria ocupa 1/3 del espacio */
+.bento-secundaria {
+    width: 33.33% !important;
+    height: 60vh !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+}
+
+/* Aseguramos que la imagen llene el contenedor sin deformarse */
+.bento-principal img,
+.bento-secundaria img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+/* -------------------------------------------------------------------------
+   OPTIMIZACIÓN MÓVIL
+   ------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .bento-wrapper {
+        flex-direction: column !important; /* Apilamos hacia abajo */
+        gap: 15px !important;
+        padding: 4vh var(--spacing-margin) !important;
+    }
+
+    /* Ambas fotos pasan a ocupar el 100% del ancho del celular */
+    .bento-principal,
+    .bento-secundaria {
+        width: 100% !important;
+    }
+
+    /* Alturas ajustadas para móvil */
+    .bento-principal {
+        height: 50vh !important;
+    }
+
+    .bento-secundaria {
+        height: 35vh !important;
+    }
+}
+}
+
+/* =========================================================================
+   OPTIMIZACIÓN MÓVIL: HERO Y METADATOS DEL PROYECTO
+   ========================================================================= */
+/* =========================================================================
+   AJUSTE NUCLEAR MÓVIL: IMAGE TICKER 
+   ========================================================================= */
+@media (max-width: 768px) {
+    /* Destruimos cualquier altura fija que intente imponer el JS o el navegador */
+    .ticker-container, 
+    .ticker-container * {
+        max-height: 80px !important; /* El contenedor total jamás pasará de 80px de alto */
+    }
+
+    .ticker-container {
+        padding: 20px 0 !important; 
+        margin: 2vh 0 !important;
+    }
+
+    /* Atacamos la clase específica y genérica por si acaso */
+    .ticker-logo, 
+    .ticker-track img {
+        height: 25px !important; /* Altura forzada miniatura */
+        max-height: 25px !important; 
+        width: auto !important; 
+        margin-right: 30px !important;
+        display: block !important;
+    }
+}
+/* Botón Volver */
+..back-button {
+    position: fixed;
+    top: 100px; /* Cambiamos 40px por 100px para que baje un poco */
+    left: 40px;
+    z-index: 1000;
+    font-family: var(--font-mono, monospace);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-color, #ffffff);
+    text-decoration: none !important;
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    backdrop-filter: blur(10px); /* Efecto vidrio esmerilado */
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.inline-back-button {
+    display: inline-block;
+    margin-bottom: 2rem; /* Espacio limpio hacia abajo */
+    font-family: var(--font-mono, monospace);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-color, #ffffff);
+    opacity: 0.6;
+    text-decoration: none !important;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.inline-back-button:hover {
+    opacity: 1;
+    color: var(--color-lime, #EFFF93);
+}
+
+/* Ajuste específico para que en móvil no se vea apretado */
+@media (max-width: 768px) {
+    .inline-back-button {
+        margin-bottom: 1rem;
+        font-size: 0.65rem;
+    }
+}
+
+/* Optimización móvil */
+@media (max-width: 768px) {
+    .back-button {
+        top: 20px;
+        left: 20px;
+        padding: 8px 16px;
+        font-size: 0.7rem;
+    }
+}
+
+
+/* =========================================================================
+   MÓDULO: PREMIUM QUOTE (Ajustado para coherencia visual)
+   ========================================================================= */
+
+.quote-module {
+    padding: 18vh var(--spacing-margin);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.quote-inner {
+max-width: 1150px !important; 
+    
+    text-align: center;
+    padding: 0 var(--spacing-margin);
+    margin: 0 auto;
+}
+
+.quote-label {
+    display: block;
+    font-family: var(--font-mono, monospace);
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.4;
+    margin-bottom: 4vh;
+}
+
+.quote-text {
+    /* Ajustamos el tamaño para que sea igual al de narrativa center */
+    /* Usamos tu fuente principal con un peso liviano */
+    font-family: var(--font-main, sans-serif) !important;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem) !important; 
+    line-height: 1.6 !important; /* Más altura de línea para legibilidad */
+    font-weight: 300 !important; 
+    margin-bottom: 4vh !important;
+    text-wrap: balance;
+    letter-spacing: -0.01em !important;
+    color: var(#ffffff , #000000);
+}
+
+.quote-author {
+    display: block;
+    font-family: var(--font-mono, monospace);
+    font-size: 0.75rem;
+    opacity: 0.5;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Ajuste móvil */
+@media (max-width: 768px) {
+    .quote-module { padding: 6vh 0 !important; }
+    .quote-text { 
+        font-size: 1.25rem !important; /* Igual que el cuerpo de texto en móvil */
+    }
+}
+
+
+/* 6. RESPONSIVE (Móvil) */
+@media (max-width: 768px) {
+    .layout-image-text {
+        flex-direction: column !important; /* En móvil, que el texto quede abajo */
+    }
+    .narrative-image-side, .narrative-text-side {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* 1. Unificar el espacio en la zona de metadatos */
+.project-meta-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    gap: 2rem !important; 
+    border-top: 1px solid var(--grid-line-color) !important;
+    padding-top: 2rem !important; /* Espacio superior (igual al que quieres abajo) */
+    margin-bottom: rem !important; /* Este es el aire hacia la imagen */
+}
+
+/* 2. Asegurar que el contenedor de narrativa empiece con ese mismo aire */
+#dyn-narrative-container {
+    padding-top: 0 !important; /* Eliminamos padding extra para que el margen de arriba mande */
+    margin-top: 0 !important;
+}
+
+/* 3. Ajuste específico para la primera imagen (Full) */
+/* Usamos el mismo valor que el padding-top de los metadatos */
+#dyn-narrative-container > .layout-full:first-child {
+    margin-top: 0 !important; /* Sin margen adicional, el padding del bloque anterior es suficiente */
+}
+
+/* 4. Si quieres un control total, forzamos que el bloque de narrativa tenga el mismo gap */
+#dyn-narrative-container {
+    gap: 2rem !important; /* Ajusta este valor al mismo que pusiste en padding-top: 2rem */
+}
